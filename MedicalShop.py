@@ -200,7 +200,7 @@ def first_input():
         import smtplib
         df=df1.loc[1:,['|    ITEM    |','|  QUANTITY  |','|  MRP  |','|  BEST_PRICE  |']] #sending email to buyer regarding their purchased items and payment status using smtplib library.
         s=smtplib.SMTP_SSL("smtp.gmail.com",465)
-        s.login("medipanacea@gmail.com","loop@3004")
+        s.login("","")
         subject="YOUR PANACEA ORDER CONFIRMATION AND PAYMENT DETAILS"
         if payment=="LATER OPTION" :                                  #message-if payment option selected is later.
             Text="Hello,\nThanks for confirming your order with PANACEA of medicines.\nYour order summary :\n{}\nTotal Payable Amount:{:.2f}\nPAYMENT STATUS :{}\nPlease pay your bill within 30 days ".format(df.to_string(),final_price,payment)
